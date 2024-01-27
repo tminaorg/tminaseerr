@@ -1,2 +1,3 @@
-FROM docker.io/fallenbagel/jellyseerr:1.7.0
-COPY public/* /app/public
+FROM busybox:stable
+COPY --from=docker.io/fallenbagel/jellyseerr:latest /app/public/* /public
+COPY public/* /public
